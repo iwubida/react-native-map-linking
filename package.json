@@ -1,10 +1,10 @@
 {
-  "name": "react-native-map-linking",
+  "name": "@iwubida/react-native-map-linking",
   "version": "1.0.0",
   "description": "Use a third-party map plugin for navigation, compatible android and ios.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint . --ext .js"
+    "test": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
