@@ -1,12 +1,8 @@
 English | [简体中文](./README.zh-CN.md)
 
-<div align="center">
+# react-native-map-linking
 
-  # react-native-map-linking
-
-  ##### `跳转第三方地图应用进行导航`，android支持(高德地图、百度地图、腾讯地图)，ios支持(高德地图、百度地图、腾讯地图、Apple地图)
-
-</div>
+##### `跳转第三方地图应用进行导航`，android支持(高德地图、百度地图、腾讯地图)，ios支持(高德地图、百度地图、腾讯地图、Apple地图)
 
 [![npm version](https://img.shields.io/npm/v/@iwubida/react-native-map-linking.svg?style=flat)](https://www.npmjs.com/package/@iwubida/react-native-map-linking)
 
