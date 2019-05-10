@@ -127,7 +127,7 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 | mode | string | 'ride' | Navigation mode ['drive','bus','ride', 'walk'] |
 | type | string | 'gcj02' | coordinate type ['gcj02', 'wgs84'] |
 
-startLocation 与 destLocation is supports following properties
+startLocation and destLocation is supports following properties
 
 | Name | Type | Description |
 | :-: | :-:  | :- |
