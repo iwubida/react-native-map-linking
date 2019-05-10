@@ -121,7 +121,7 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 ```
 
 | Name | Type | Default | Description |
-| :-: | :-: | :-: | :- |
+| :-: | :-: | :-: | :-: |
 | startLocation | object | null | 起点坐标信息 |
 | destLocation | object | null | 终点坐标信息 |
 | mode | string | 'ride' | 导航模式 ['drive','bus','ride', 'walk'] |
@@ -130,7 +130,7 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 startLocation 与 destLocation 对象的字段
 
 | Name | Type | Description |
-| :-: | :-:  | :- |
+| :-: | :-:  | :-: |
 | lng | number | 经度 |
 | lat | object | 纬度 |
 | title | string | 地址 |

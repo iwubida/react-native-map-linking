@@ -121,7 +121,7 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 ```
 
 | Name | Type | Default | Description |
-| :-: | :-: | :-: | :- |
+| :-: | :-: | :-: | :-: |
 | startLocation | object | null | Starting location info |
 | destLocation | object | null | End location info |
 | mode | string | 'ride' | Navigation mode ['drive','bus','ride', 'walk'] |
@@ -130,7 +130,7 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 startLocation and destLocation is supports following properties
 
 | Name | Type | Description |
-| :-: | :-:  | :- |
+| :-: | :-:  | :-: |
 | lng | number | longitude |
 | lat | object | latitude |
 | title | string | address |
