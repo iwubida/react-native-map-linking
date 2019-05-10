@@ -2,17 +2,17 @@ English | [简体中文](./README.zh-CN.md)
 
 # react-native-map-linking
 
-##### `跳转第三方地图应用进行导航`，android支持(高德地图、百度地图、腾讯地图)，ios支持(高德地图、百度地图、腾讯地图、Apple地图)
+##### Go to third-party Map App for navigation, Android mobile stand by Gaode Map and BaiDu Map and Tencent Map, IOS mobile stand by  Gaode Map and BaiDu Map and Tencent Map and Apple Map.
 
 [![npm version](https://img.shields.io/npm/v/@iwubida/react-native-map-linking.svg?style=flat)](https://www.npmjs.com/package/@iwubida/react-native-map-linking)
 
-## 例子：调用API传入`起点坐标`和`终点坐标`后可跳转第三方地图应用进行导航
+## Example：Call the API to pass the `starting location info` and `end location info` to jump to the specified map app for navigation. 
 
-- 当未安装任何第三方地图应用时，提示推荐下载列表（ios自带Apple地图）
+- Prompt recommended download list when no third-party map app is installed (IOS comes with Apple map)
 
 <img src="/resource/android-no-map.jpg" height="400px">
 
-- 选择其中一个后跳转下载地址页面（👇分别是(高德地图、百度地图、腾讯地图)跳转的页面）
+- Select one of them to jump to the download address page (👇the following are the pages of Gao De Map, Baidu Map, Tencent Map)
 
 <p float="left">
 
@@ -24,7 +24,7 @@ English | [简体中文](./README.zh-CN.md)
 
 </p>
 
-- 当系统有安装第三方地图应用时，只显示`已有`的应用列表
+- When the system has a third-party map application installed, only the list of `existing app` is displayed.
 
 <p float="left">
 
@@ -34,7 +34,7 @@ English | [简体中文](./README.zh-CN.md)
 
 </p>
 
-- 点击列表项后跳转相应的地图应用进行导航 （👇分别是(高德地图、百度地图、腾讯地图)的导航页面）
+- Click on the list item and jump to the corresponding map application to navigate (the following are the navigation pages of Gao De Map, Baidu Map, Tencent Map)
 
 <p float="left">
 
@@ -46,7 +46,7 @@ English | [简体中文](./README.zh-CN.md)
 
 </p>
 
-## 安装
+## Install
 
 yarn
 
@@ -60,7 +60,7 @@ npm install
 npm install @iwubida/react-native-map-linking
 ```
 
-## 使用
+## Usage
 
 ```javascript
 import MapLinking from '@iwubida/react-native-map-linking';
@@ -69,14 +69,14 @@ import { TouchableOpacity, Text } from 'react-native';
 
 class Demo extends PureComponent {
   handleChange = () => {
-    // 起点坐标信息
+    // starting location info
     const startLocation = {
       lng: 106.534892,
       lat: 29.551891,
       title: '李子坝抗战遗址公园'
     };
 
-    // 终点坐标信息
+    // end location info
     const destLocation = {
       lng: 106.27613,
       lat: 29.972084,
@@ -89,7 +89,7 @@ class Demo extends PureComponent {
   render() {
     return (
       <TouchableOpacity onPress={this.handleChange}>
-        <Text>开始导航</Text>
+        <Text>start navigation</Text>
       </TouchableOpacity>
     );
   }
@@ -99,7 +99,7 @@ export default Demo;
 
 ```
 
-如果需要`兼容腾讯地图`需要先初始化传入`腾讯地图开发者key` [申请地址](https://lbs.qq.com/console/key.html)
+If you need `to be compatible with Tencent map`, you need to initialize the incoming `Tencent map developer key`. [Application URL](https://lbs.qq.com/console/key.html)
 
 ```javascript
 import MapLinking from '@iwubida/react-native-map-linking';
@@ -110,9 +110,9 @@ componentDidMount() {
 
 ```
 
-## 参数支持说明
+## Parameter support description
 
-planRoute API 支持参数
+planRoute API is supports following properties
 
 ```javascript
 import MapLinking from '@iwubida/react-native-map-linking';
@@ -122,15 +122,15 @@ MapLinking.planRoute({ startLocation, destLocation, mode, type });
 
 | Name | Type | Default | Description |
 | :-: | :-: | :-: | :- |
-| startLocation | object | null | 起点坐标信息 |
-| destLocation | object | null | 终点坐标信息 |
-| mode | string | 'ride' | 导航模式 ['drive','bus','ride', 'walk'] |
-| type | string | 'gcj02' | 坐标类型 ['gcj02', 'wgs84'] |
+| startLocation | object | null | Starting location info |
+| destLocation | object | null | End location info |
+| mode | string | 'ride' | Navigation mode ['drive','bus','ride', 'walk'] |
+| type | string | 'gcj02' | coordinate type ['gcj02', 'wgs84'] |
 
-startLocation 与 destLocation 对象的字段
+startLocation 与 destLocation is supports following properties
 
 | Name | Type | Description |
 | :-: | :-:  | :- |
-| lng | number | 经度 |
-| lat | object | 纬度 |
-| title | string | 地址 |
+| lng | number | longitude |
+| lat | object | latitude |
+| title | string | address |
