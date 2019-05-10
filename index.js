@@ -2,7 +2,6 @@ import { Linking, ActionSheetIOS, Platform } from "react-native";
 import ActionSheet from "react-native-general-actionsheet";
 
 // 腾讯地图开发者key
-// const tmapKey = 'OZRBZ-GD3RQ-KZV5T-GEBD7-7WBX7-UBB7O';
 let tmapKey = "";
 
 // 下载地图app地址
@@ -22,7 +21,7 @@ const DownloadUrl = {
 };
 
 // 第三方地图应用Url
-const openUrl = (startLocation, destLocation, mode, type, appName) => {
+const openUrl = ({ startLocation, destLocation, mode, type, appName }) => {
   // 高德地图参数配置
   const GaoDeDev = type === "gcj02" ? 0 : 1; // 起终点是否偏移(0:lat 和 lon 是已经加密后的,不需要国测加密; 1:需要国测加密)
   const GaoDeT =
@@ -181,22 +180,14 @@ const showExistApp = maps => {
 /**
  * 规划路线
  */
-const planRoute = (
-  startLocation = {
-    lng: 106.534892,
-    lat: 29.551891,
-    title: "李子坝抗战遗址公园"
-  },
-  destLocation = {
-    lng: 106.575442,
-    lat: 29.553377,
-    title: "得意世界"
-  },
+const planRoute = ({
+  startLocation = {},
+  destLocation = {},
   mode = "ride",
   type = "gcj02",
   appName = "MapLinking"
-) => {
-  const maps = openUrl(startLocation, destLocation, mode, type, appName);
+}) => {
+  const maps = openUrl({ startLocation, destLocation, mode, type, appName });
   const promises = maps.map(item => {
     return Linking.canOpenURL(item[1]);
   });

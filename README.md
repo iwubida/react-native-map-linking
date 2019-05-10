@@ -83,7 +83,7 @@ const destLocation = {
   title: '合川区邮政局(重庆市南园路198号)'
 };
 
-MapLinking.planRoute(startLocation, destLocation);
+MapLinking.planRoute({startLocation, destLocation});
 
 ```
 
