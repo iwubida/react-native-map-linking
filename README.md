@@ -29,9 +29,13 @@ English | [简体中文](./README.zh-CN.md)
 </p>
 
 - 当系统有安装第三方地图应用时，只显示已有的应用列表
+<p float="left">
 
 <img src="/resource/android-list.jpg" height="400px">
 
+<img src="/resource/ios-list.png" height="400px">
+
+</p>
 - 点击列表项后跳转相应的地图应用进行导航 （👇分别是(高德地图、百度地图、腾讯地图)的导航页面）
 
 <p float="left">
