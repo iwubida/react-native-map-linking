@@ -1,0 +1,30 @@
+{
+  "name": "react-native-map-linking",
+  "version": "1.0.0",
+  "description": "Use a third-party map plugin for navigation, compatible android and ios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwubida/react-native-map-linking.git"
+  },
+  "keywords": [
+    "react-native",
+    "map"
+  ],
+  "author": "wangdanting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iwubida/react-native-map-linking/issues"
+  },
+  "homepage": "https://github.com/iwubida/react-native-map-linking#readme",
+  "dependencies": {
+    "react-native": "^0.59.8",
+    "react-native-general-actionsheet": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-automatic": "^0.2.6"
+  }
+}
