@@ -68,22 +68,38 @@ npm install @iwubida/react-native-map-linking
 
 ```javascript
 import MapLinking from '@iwubida/react-native-map-linking';
+import React, { PureComponent } from 'react';
+import { TouchableOpacity, Text } from 'react-native';
 
-// 起点坐标信息
-const startLocation = {
-  lng: 106.534892,
-  lat: 29.551891,
-  title: '李子坝抗战遗址公园'
-};
+class Demo extends PureComponent {
+  handleChange = () => {
+    // 起点坐标信息
+    const startLocation = {
+      lng: 106.534892,
+      lat: 29.551891,
+      title: '李子坝抗战遗址公园'
+    };
 
-// 终点坐标信息
-const destLocation = {
-  lng: 106.27613,
-  lat: 29.972084,
-  title: '合川区邮政局(重庆市南园路198号)'
-};
+    // 终点坐标信息
+    const destLocation = {
+      lng: 106.27613,
+      lat: 29.972084,
+      title: '合川区邮政局(重庆市南园路198号)'
+    };
 
-MapLinking.planRoute({startLocation, destLocation});
+    MapLinking.planRoute({ startLocation, destLocation });
+  };
+
+  render() {
+    return (
+      <TouchableOpacity onPress={this.handleChange}>
+        <Text>开始导航</Text>
+      </TouchableOpacity>
+    );
+  }
+}
+
+export default Demo;
 
 ```
 
@@ -97,3 +113,20 @@ componentDidMount() {
 }
 
 ```
+
+## 参数支持说明
+
+planRoute API 支持参数
+
+```javascript
+import MapLinking from '@iwubida/react-native-map-linking';
+
+MapLinking.planRoute({ startLocation, destLocation, mode, type });
+```
+
+| Name | Type | Default | Description |
+| :-: | :-: | :-: | :- |
+| startLocation | object | null | 起点坐标信息 |
+| destLocation | object | null | 终点坐标信息 |
+| mode | string | 'ride' | 导航模式 ['drive','bus','ride', 'walk'] |
+| type | string | 'gcj02' | 坐标类型 ['gcj02', 'wgs84'] |
