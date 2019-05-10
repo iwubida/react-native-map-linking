@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/iwubida/react-native-map-linking#readme",
   "dependencies": {
-    "react-native": "^0.59.8",
     "react-native-general-actionsheet": "^1.0.3"
   },
   "devDependencies": {
-    "eslint-plugin-automatic": "^0.2.6"
+    "eslint-plugin-automatic": "^0.2.6",
+    "react-native": "^0.59.8"
   }
 }
