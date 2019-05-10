@@ -1,6 +1,6 @@
 {
   "name": "@iwubida/react-native-map-linking",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use a third-party map plugin for navigation, compatible android and ios.",
   "main": "index.js",
   "scripts": {
